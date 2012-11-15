@@ -260,5 +260,17 @@ public interface ServerApi {
     *           the name of the metadata item
     */
    void deleteMetadata(String id, String key);
+   
+   
+   /**
+    * Get usage information about the server such as CPU usage, Memory and IO.
+    * The information returned by this method is dependent on the hypervisor
+    * in use by the OpenStack installation.
+    * @param id
+    *           id of the server
+    * @return JSon formatted string with the collected diagnostics. 
+    */
+   String getDiagnostics(String id);
+
 
 }
